@@ -244,7 +244,6 @@ fn updateBall(time: *f32) ?BallEvent {
         } else {
             return .score2;
         }
-        return .score1;
     } else if (min_time == wall_time) {
         return bounceWall(wall_time);
     } else if (min_time == player_time) {
