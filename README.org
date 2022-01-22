@@ -1,0 +1,33 @@
+* Pong
+This is a Pong implementation that I wrote in about a day. The ball always starts heading toward the left and bounces according to how far from the center of the paddle it is when it hits.
+
+** Controls
+|-------+------------------------|
+| Key   | Action                 |
+|-------+------------------------|
+| Tab   | Pause                  |
+| R     | Reset                  |
+| Space | Serve the ball         |
+| Q     | Move left paddle up    |
+| A     | Move left paddle down  |
+| P     | Move right paddle up   |
+| L     | Move right paddle down |
+|-------+------------------------|
+
+** Dependencies
+- Zig
+- Raylib
+
+*** Tested With
+- Arch Linux
+- Zig Master (2022-01-19 build)
+- Raylib 4.0
+
+** Building
+1. Install the dependencies
+2. Run =zig build= to compile the game to =zig-out/bin/pong=.
+   =zig build run= may be used to compile and run the game.
+   To compile with release optimizations and no runtime safety, the =-Drelease-fast= flag may be added.
+
+** License
+MIT
