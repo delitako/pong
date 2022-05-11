@@ -362,15 +362,13 @@ fn bouncePaddle(time: f32) BallEvent {
 /// where `diff` is the ball's y-position minus the paddle's y-position
 /// Always returns positive x velocity
 fn paddleHitVelocity(diff: f32) c.Vector2 {
-    const math = std.math;
-
     // offset from the middle of the paddle
     const off = diff + Ball.size / 2 - Player.height / 2;
     // normalize it to a value within -1 and 1
     const norm_off = off / (Ball.size / 2 + Player.height / 2);
     const angle = norm_off * std.math.pi * 0.5 * bounce_angle_limit;
 
-    return vec2(Ball.speed * math.cos(angle), Ball.speed * math.sin(angle));
+    return vec2(Ball.speed * @cos(angle), Ball.speed * @sin(angle));
 }
 
 fn draw() void {
